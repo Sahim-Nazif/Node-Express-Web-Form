@@ -17,11 +17,7 @@ if (process.env.NODE_ENV==='development') {
     console.log('the app is in production phase ')
 }
 
-app.get('/hello', (req, res)=>{
 
-    res.send('Hi there')
-    
-})
 
 app.listen(process.env.PORT , ()=>{
 
