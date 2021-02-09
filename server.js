@@ -1,9 +1,9 @@
 const express=require('express')
 const app = express();
 const dotenv=require('dotenv')
+const morgan=require('morgan');
 
 
-const PORT= process.env.PORT ||3000;
 
 dotenv.config();
 
@@ -17,9 +17,14 @@ if (process.env.NODE_ENV==='development') {
     console.log('the app is in production phase ')
 }
 
+app.get('/hello', (req, res)=>{
 
-app.listen(PORT, ()=>{
+    res.send('Hi there')
+    
+})
 
-    console.log(`The app is running in ${process.env.NODE_ENV} mode on port ${PORT}`)
+app.listen(process.env.PORT , ()=>{
+
+    console.log(`The app is running in ${process.env.NODE_ENV} mode on port ${process.env.PORT }`)
 
 })
