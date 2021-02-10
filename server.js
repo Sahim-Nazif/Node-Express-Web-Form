@@ -2,10 +2,15 @@ const express=require('express')
 const app = express();
 const dotenv=require('dotenv')
 const morgan=require('morgan');
+const routes= require('./app/routes/homepageRoutes')
 
 
 
 dotenv.config();
+
+app.set('views', './app/views');
+app.set('view engine', 'ejs');
+
 
 if (process.env.NODE_ENV==='development') {
     app.use(morgan('dev'))
@@ -17,6 +22,11 @@ if (process.env.NODE_ENV==='development') {
     console.log('the app is in production phase ')
 }
 
+app.use(routes)
+
+//static file access point
+app.use(express.static('public/css'));
+app.use(express.urlencoded({extended:true}))
 
 
 app.listen(process.env.PORT , ()=>{
