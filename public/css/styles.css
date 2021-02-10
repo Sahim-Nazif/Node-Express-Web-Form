@@ -2,3 +2,34 @@ h1 {
     text-align: center;
     margin-top: 100px;
 }
+
+.loginBox {
+    width: 200%;
+    max-width: 600px;
+    padding: 5px;
+    margin: auto;
+    position: initial;
+ 
+    background:white;
+
+ 
+}
+
+    .loginBox button {
+        border: 0;
+        background: none;
+        display: block;
+        margin: 20px auto;
+        text-align: center;
+        border: 2px solid #764BA2;
+        padding: 10px 12px;
+        max-width: 200px;
+        width: 300px;
+        outline: none;
+        border-radius: 10px;
+        transition: 0.25s;
+        background-color: #764BA2;
+    }
+    .form-label{
+        padding-top:20px;
+    }

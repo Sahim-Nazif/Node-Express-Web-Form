@@ -6,13 +6,9 @@
     <body>
 
         <h1 class="text-danger">Covid-19 Food Support for families</h1>
-
-        <div class='topsection'>
-
-        </div>
         <div class="topsection">
             <div class="container mt-5 loginBox">
-                <form action="/comment" method="POST">
+                <form action="/confirmPage" method="POST">
                     <div>
                         <label class="form-label">First Name</label>
                         <input type="text" placeholder="First Name" class="form-control " name="firstName" required>
@@ -25,16 +21,16 @@
                         <label class="form-label">Address</label>
                         <input type="text" placeholder="Address" class="form-control " name="address" required>
                     </div>
-                    <div>
+                    <div class="form-label">
 
-                        <select path="province" class="custom-select">
+                        <select name='city' path="province" class="custom-select">
                             <option selected>Please choose Your City</option>
-                            <option value="Ontario">Toronto</option>
-                            <option value="Alberta">Scarborough</option>
-                            <option value="Quebec">Markham</option>
-                            <option value="Monitoba">Etobicoke</option>
-                            <option value="Monitoba">Ajax</option>
-                            <option value="mississauga">mississauga</option>
+                            <option value="Toronto">Toronto</option>
+                            <option value="Scarborough">Scarborough</option>
+                            <option value="Markham">Markham</option>
+                            <option value="Etobicoke">Etobicoke</option>
+                            <option value="Ajax">Ajax</option>
+                            <option value=">Mississauga">Mississauga</option>
                         </select>
 
                         <div>
@@ -42,14 +38,15 @@
                                 <label class="form-label">Province</label>
                                 <input type="text" placeholder="Ontario" class="form-control " readonly>
                             </div>
-                            <div>
+                            <div class="form-label">
 
-                                <select path="Employment" class="custom-select">
+                                <select name='employment' path="Employment" class="custom-select ">
                                     <option selected>Employement Status</option>
                                     <option value="Ontario">Employed</option>
                                     <option value="Alberta">Unemployed</option>
                                 </select>
                             </div>
+                            <div  class="form-label">
                             <p>Please select your gender:</p>
                             <input type="radio" id="male" name="gender" value="male">
                             <label for="male">Male</label>
@@ -57,21 +54,21 @@
                             <label for="female">Female</label>
                             <input type="radio" id="other" name="gender" value="other">
                             <label for="other">Other</label>
-
+                        </div>
                             <p>Please select your marital status:</p>
-                            <input type="radio" id="male" name="gender" value="male">
+                            <input type="radio" id="male" name="marital-status" value="male">
                             <label for="male">Married</label>
-                            <input type="radio" id="female" name="gender" value="female">
+                            <input type="radio" id="female" name="marital-status" value="female">
                             <label for="female">Single</label>
                             <div>
                                 <label class="form-label">Number of family members</label>
                                 <input type="number" placeholder="Number of family member" class="form-control "
-                                    name="phoneNumber" max="20" min="1">
+                                    name="numberOfFamilyMembers" max="20" min="1">
                             </div>
                             <div>
                                 <label for="exampleInputEmail1" class="form-label">Email address</label>
                                 <input type="email" placeholder="Email Address" class="form-control "
-                                    id="exampleInputEmail1" name="email" aria-describedby="emailHelp" required>
+                                    id="exampleInputEmail1" name="email"  required>
                             </div>
                             <div>
                                 <label class="form-label">Phone Number</label>
