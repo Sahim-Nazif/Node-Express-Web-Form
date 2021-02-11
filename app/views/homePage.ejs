@@ -7,11 +7,11 @@
 
         <h1 class="text-danger">Covid-19 Food Support for families</h1>
         <div class="topsection">
-            <div class="container mt-5 loginBox">
+            <div class=" mt-5 loginBox">
                 <form action="/confirmPage" method="POST">
                     <div>
                         <label class="form-label">First Name</label>
-                        <input type="text" placeholder="First Name" class="form-control " name="firstName" required>
+                        <input type="text" placeholder="First Name" class="form-control " name="firstName"  required>
                     </div>
                     <div>
                         <label class="form-label">Last Name</label>
@@ -42,8 +42,8 @@
 
                                 <select name='employment' path="Employment" class="custom-select ">
                                     <option selected>Employement Status</option>
-                                    <option value="Ontario">Employed</option>
-                                    <option value="Alberta">Unemployed</option>
+                                    <option value="Employed">Employed</option>
+                                    <option value="Unemployed">Unemployed</option>
                                 </select>
                             </div>
                             <div  class="form-label">
@@ -56,14 +56,14 @@
                             <label for="other">Other</label>
                         </div>
                             <p>Please select your marital status:</p>
-                            <input type="radio" id="male" name="marital-status" value="male">
-                            <label for="male">Married</label>
-                            <input type="radio" id="female" name="marital-status" value="female">
-                            <label for="female">Single</label>
+                            <input type="radio" id="married" name="maritalStatus" value="married">
+                            <label for="married">Married</label>
+                            <input type="radio" id="single" name="maritalStatus" value="single">
+                            <label for="single">Single</label>
                             <div>
                                 <label class="form-label">Number of family members</label>
                                 <input type="number" placeholder="Number of family member" class="form-control "
-                                    name="numberOfFamilyMembers" max="20" min="1">
+                                    name="numberOfFamilyMembers" max="20" min="0">
                             </div>
                             <div>
                                 <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -72,17 +72,17 @@
                             </div>
                             <div>
                                 <label class="form-label">Phone Number</label>
-                                <input type="number" placeholder="Phone Number" class="form-control " name="phoneNumber"
+                                <input type="tel" placeholder="Phone Number" class="form-control " name="phoneNumber"
                                     required>
                             </div>
 
 
-                            <button type="submit" class="btn btn-secondary">Login</button>
+                            <button  type="submit" class="btn btn-secondary" >Submit</button>
                 </form>
             </div>
         </div>
 
     </body>
-    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/footer.ejs') %>
 
 </html>

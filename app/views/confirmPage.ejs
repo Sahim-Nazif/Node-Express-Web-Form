@@ -2,12 +2,36 @@
 <html lang="en">
     <%- include('./partials/header.ejs') %>
 <body>
+    <form method="POST" action="/submit">
     <div class="container">
 
         <h3>Please confirm your information</h3>
-
-        <p> <%= firstName %></p>
-
+        <label>First Name</label>
+        <input type="text" class="form-control" name="firstName"  value="<%= firstName %>" >
+        <label>Last Name</label>
+        <p><%= lastName %></p>
+        <label>Address</label>
+        <p> <%= address %></p>
+        <label>City</label>
+        <p> <%= city %></p>
+        <label>Province</label>
+        <p> Ontario</p>
+        <label>Employement Status</label>
+        <p> <%= employment %></p>
+        <label>Gender</label>
+        <p> <%= gender %></p>
+        <label>Marital Status</label>
+        <p> <%= maritalStatus %></p>
+        <label>Number of Family Members</label>
+        <p><%= numberOfFamilyMembers %></p>
+        <label>Email</label>
+        <p> <%= email %></p>
+        <label>Phone Number</label>
+        <p> <%= phoneNumber %></p>
+        <button type="submit" class="btn btn-danger" >Confirm </button>
     </div>
+</form>
 </body>
+
+<%- include('./partials/footer.ejs') %>
 </html>

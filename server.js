@@ -3,11 +3,12 @@ const app = express();
 const dotenv=require('dotenv')
 const morgan=require('morgan');
 const routes= require('./app/routes/Routes')
-
-
+const session=require('express-session')
+const bodyParser = require("body-parser");
 
 dotenv.config();
 
+app.use(bodyParser.urlencoded({extended: true}));
 app.set('views', './app/views');
 app.set('view engine', 'ejs');
 
@@ -21,6 +22,13 @@ if (process.env.NODE_ENV==='development') {
     app.use(compress());
     console.log('the app is in production phase ')
 }
+
+app.use(session({
+    secret: 'keyboard cat',
+    resave: true,
+    saveUninitialized: true,
+    cookie: { secure: true }
+}));
 
 
 

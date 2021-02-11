@@ -2,8 +2,9 @@
 
 const homePage_controller=(req, res)=>{
 
-    
+  
     res.render('homePage');
+    
 }
 
 
